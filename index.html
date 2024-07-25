@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AENZBi Invoice Generator</title>
+</head>
+<body>
+    <h1>Invoice Generator</h1>
+    <form id="invoiceForm">
+        <h2>Seller Information</h2>
+        <label for="sellerName">Seller Name:</label>
+        <input type="text" id="sellerName" required><br>
+        <label for="sellerAddress">Seller Address:</label>
+        <input type="text" id="sellerAddress" required><br>
+        <label for="companyNIF">Company NIF:</label>
+        <input type="text" id="companyNIF" required><br>
+        <label for="legalForm">Legal Form:</label>
+        <input type="text" id="legalForm" required><br>
+        <label for="tradeRegister">Trade Register:</label>
+        <input type="text" id="tradeRegister" required><br>
+        <label for="sellerContact">Seller Contact:</label>
+        <input type="text" id="sellerContact" required><br>
+        <label for="vatSubjected">VAT Subjected:</label>
+        <input type="text" id="vatSubjected" required><br>
+
+        <h2>Buyer Information</h2>
+        <label for="buyerName">Buyer Name:</label>
+        <input type="text" id="buyerName" required><br>
+        <label for="buyerAddress">Buyer Address:</label>
+        <input type="text" id="buyerAddress" required><br>
+
+        <h2>Invoice Details</h2>
+        <label for="invoiceDate">Invoice Date:</label>
+        <input type="date" id="invoiceDate" required><br>
+
+        <h2>Items</h2>
+        <div id="items"></div>
+        <button type="button" onclick="addItem()">Add Item</button><br><br>
+
+        <button type="submit">Generate Invoice</button>
+    </form>
+
+    <h2>Invoice Preview</h2>
+    <div id="invoicePreview"></div>
+
+    <h2>Invoice Management</h2>
+    <button type="button" onclick="listInvoices()">List Invoices</button>
+    <button type="button" onclick="listProducts()">List Products</button>
+    <button type="button" onclick="listCustomers()">List Customers</button>
+    <button type="button" onclick="getPayment()">Get Payment</button>
+    <button type="button" onclick="generateBill()">Generate Bill</button>
+    <button type="button" onclick="printOrSaveBill()">Print/Save Bill</button>
+    <button type="button" onclick="listBills()">List Bills</button>
+    <button type="button" onclick="editOrder()">Edit Order</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
